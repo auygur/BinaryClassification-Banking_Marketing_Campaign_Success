@@ -1,20 +1,35 @@
-# NYC Rent Prediction Using Linear Models
+# Direct Marketing Campaign Success (Banking)
 
-Problem: A real estate agent wants to estimate the market rate for some apartments in NYC that just went into the market again. They want to use the data posted by the Census in 2014.
+Problem: A banking institution ran a direct marketing campaign based on phone calls. Often, more than one contact to the same client was required, in order to assess if the product (bank term deposit) would be subscribed or not. The task is to predict whether someone will subscribe to the term deposit or not based on the given information.
 
-Approach:  Create and validate a machine learning approach to predict the monthly rent of an apartment.
+Approach:  Create and validate 3 different set of machine learning models:
+#### Set 1:
+1) KNeighborsClassifier
+2) GaussianNB
+3) LinearDiscriminantAnalysis
+4) MLPClassifier
+5) LogisticRegression
 
-Assumptions: 1) Only used features that apply to pricing an apartment that is not currently rented. 2) The market prices don't increase, so the rent for a new tenant would be the same as for the current tenant.
+#### Set 2:
+1) GradientBoostingClassifier 
+2) AdaBoostClassifier 
+3) RandomForestClassifier 
+4) DecisionTreeClassifier 
+5) ExtraTreesClassifier
 
-## Data 
-The raw data can be downloaded from : https://www.census.gov/housing/nychvs/data/2014/userinfo2.html
 
-A parsed version is uploaded to figshare: https://ndownloader.figshare.com/files/7586326
+#### Set 3: Following classifiers used Logistic regression,GaussianNB,GradientBoostingClassifier,ExtraTreeClassifier with variable weights. 
+1) ExtraTreesClassifier
+2) VotingClassifier 
+3) StackingClassifier
+
+- Also tried resampling techniques (smote, undersampling, oversampling etc)
+
 
 ## Files
-- main_rent.py includes all the codes for cleaning the data and models.
-- test_score.py includes the code for testing the r^2 using various enviroments on travis
-- .travis.yml and requirements-travis.txt are the necessary files for testing py file on travis website.
+- data folder includes data.csv for training and cross-validation, holdout.csv for testing and data_dictionary.txt
+- main.ipynb includes all the codes for cleaning the data and models.
+
  
  
 
